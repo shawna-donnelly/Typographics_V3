@@ -1,4 +1,6 @@
 const themeSwitcher = document.getElementById("theme-switcher");
+const nav = document.getElementById("nav");
+const menuIcon = document.querySelector(".menu-icon");
 
 // Dark Mode Styles
 const darkMode = () => {
@@ -45,3 +47,14 @@ if (currentThemeFromLocalStorage) {
     lightMode();
   }
 }
+
+// Navigation
+const toggleMenu = () => {
+  nav.classList.toggle("active");
+  menuIcon.classList.toggle("active");
+};
+
+const hideMenu = () => {
+  nav.classList.remove("active");
+  menuIcon.classList.remove("active");
+};
